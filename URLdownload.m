@@ -8,10 +8,11 @@ clc;
 % inputfile=fopen('C:\Users\Admin\Desktop\inputs\compoundlist1.txt','r');
 
 disp('Extracting bonds and atoms from KEGG...');
+ff = waitbar(0,'Extracting bonds and atoms from KEGG. Please wait...');
 fileID = fopen(tempfile3,'w');
 fclose(fileID);
-prefix='http://www.genome.jp/dbget-bin/www_bget?-f+k+compound+';
-prefix1='http://www.genome.jp/dbget-bin/www_bget?';
+prefix='https://www.genome.jp/dbget-bin/www_bget?-f+k+compound+';
+prefix1='https://www.genome.jp/dbget-bin/www_bget?';
 inputfile=fopen(tempfile1,'r');
 
 line=fgets(inputfile);
@@ -24,7 +25,7 @@ while ischar(line)
     
 fullURL=strcat(prefix,line);
 fullURL1=strcat(prefix1,line);
-%fullURL = 'http://www.genome.jp/dbget-bin/www_bget?-f+k+compound+C03082';
+fullURL
 str = urlread(fullURL);
 
 %if K is number then found, if K null then string not found
@@ -161,3 +162,4 @@ cc=cc+1;
 end
 fclose(inputfile);
 disp('Extraction of bonds and atoms from KEGG completed!');
+close(ff);

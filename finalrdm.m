@@ -1,6 +1,7 @@
 clearvars -except comp_name change tempfile1 tempfile2 tempfile3 resultfile;
 clc;
 disp('Processing ASAPP. Awaiting results...');
+ff=waitbar(0,'Processing ASAPP. Awaiting results...');
 fid=fopen(tempfile3);
 line1=fgets(fid);
 line2=fgets(fid);
@@ -875,6 +876,7 @@ for i=1:length(bb1)
         end
     
 end
+close(ff);
 disp('              --------------------Results--------------------');
 fprintf('\n');
 fprintf('\n');

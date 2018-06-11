@@ -12,6 +12,7 @@ tempfile2='C:\Users\Admin\Desktop\inputs\exp.txt';
 tempfile3='C:\Users\Admin\Desktop\inputs\exp1.txt';
 
 disp('Extracting compound IDs from compound database...');
+ff=waitbar(0,'Extracting compound IDs from compound database. Please wait...');
 comp_name={};
 %text files and databases to be given as input
 load(compounddatabase);
@@ -72,6 +73,7 @@ while ischar(line)
 end
 fclose(inputfile);
 fclose(outputfile);
+close(ff);
 disp('Extraction of compound ID completed!');
 run('H:\rishika\MATLAB\graph\URLdownload.m')
 run('H:\rishika\MATLAB\graph\finalrdm.m')
