@@ -2,14 +2,24 @@
 %clearing the workspace
 clear;
 clc;
-
+prompt = {'Enter compound database path and file name:','Enter the input file name', 'Enter hte file name in which the output is displayed',     'Enter a random temporary file' ,    'Enter a random temporary file' ,    'Enter a random temporary file'};
+title = 'Input';
+dims =  [1 50; 1 50; 1 50; 1 50; 1 50; 1 50];
+definput = {'kegg_compound_list.mat','C:\Users\Admin\Desktop\inputs\compound_list2.txt','C:\Users\Admin\Desktop\inputs\result.txt','C:\Users\Admin\Desktop\inputs\compoundlist1.txt','C:\Users\Admin\Desktop\inputs\exp.txt','C:\Users\Admin\Desktop\inputs\exp1.txt'};
+answer = inputdlg(prompt,title,dims,definput);
 %Initialization of file names
-compounddatabase='kegg_compound_list.mat';
-compoundfile='C:\Users\Admin\Desktop\inputs\compound_list2.txt';
-resultfile='C:\Users\Admin\Desktop\inputs\result.txt';
-tempfile1='C:\Users\Admin\Desktop\inputs\compoundlist1.txt';
-tempfile2='C:\Users\Admin\Desktop\inputs\exp.txt';
-tempfile3='C:\Users\Admin\Desktop\inputs\exp1.txt';
+compounddatabase=answer{1};
+compoundfile=answer{2};
+resultfile=answer{3};
+tempfile1=answer{4};
+tempfile2=answer{5};
+tempfile3=answer{6};
+% compounddatabase='kegg_compound_list.mat';
+% compoundfile='C:\Users\Admin\Desktop\inputs\compound_list2.txt';
+% resultfile='C:\Users\Admin\Desktop\inputs\result.txt';
+% tempfile1='C:\Users\Admin\Desktop\inputs\compoundlist1.txt';
+% tempfile2='C:\Users\Admin\Desktop\inputs\exp.txt';
+% tempfile3='C:\Users\Admin\Desktop\inputs\exp1.txt';
 
 disp('Extracting compound IDs from compound database...');
 ff=waitbar(0,'Extracting compound IDs from compound database. Please wait...');
