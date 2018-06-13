@@ -15,4 +15,4 @@ The folder "Sample" has got a few sample files which contains random combination
 
 Check that you have a stable internet connection.
 
-The result can be viewed in the Matlab command window as well as in the text file given in variable resultfile
+The result can be viewed in the Matlab command window as well as in the text file given in result file
