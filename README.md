@@ -5,8 +5,6 @@ In the folder you will find the following files:
 3. URLdownload.m
 4. kegg_compound_list.mat
 
-The ID_extraction is the main file that needs to be executed
-
 The ID_extraction is the main file that needs to be executed.
 
 The kegg_compound_list.mat file is the database of different compounds available in KEGG database and their respective identifiers in the format C*****.
