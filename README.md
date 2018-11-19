@@ -1,4 +1,4 @@
-# asapp
+# ASAPP
 In the folder you will find the following files:
 1. ID_extraction.m
 2. finalrdm.m
